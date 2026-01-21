@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Checkpoint 01 - Griffin</title>
+<title>Checkpoint Chapter 01</title>
 
 <!-- internal style -->
 <style>
-body { font-family: Arial, sans-serif; margin: 2rem; }
-.card { border: 1px solid #ddd; padding: 1rem; border-radius: 12px; max-width: 520px; }
-button { padding: 0.6rem 1rem; cursor: pointer; }
+body {
+font-family: Arial;
+margin: 20px;
+}
+
+button {
+padding: 8px;
+}
 </style>
 </head>
 
@@ -17,20 +20,14 @@ button { padding: 0.6rem 1rem; cursor: pointer; }
 <h1>Checkpoint: Chapter 01</h1>
 <p>This page is hosted with GitHub Pages.</p>
 
-<div class="card">
-<h2>Demo Interaction</h2>
-<p id="msg">Click the button to run JavaScript.</p>
-<button id="btn">Click me</button>
-</div>
+<button onclick="changeText()">Click me</button>
+<p id="message">Waiting for button click...</p>
 
 <!-- internal script -->
 <script>
-const btn = document.getElementById("btn");
-const msg = document.getElementById("msg");
-
-btn.addEventListener("click", () => {
-msg.textContent = "JavaScript is working ✅";
-});
+function changeText() {
+document.getElementById("message").innerHTML = "JavaScript is working!";
+}
 </script>
 </body>
 </html>
